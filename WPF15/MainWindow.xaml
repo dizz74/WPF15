@@ -1,0 +1,125 @@
+﻿<Window x:Class="WPF15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid>
+        <FlowDocumentReader x:Name="documentViewer">
+            <FlowDocument ColumnWidth="550" ColumnGap="10">
+                <Paragraph>ЗАДАНИЕ 15. ДОКУМЕНТЫ И ПЕЧАТЬ</Paragraph>
+                <BlockUIContainer TextAlignment="Left">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
+                                >
+                        <Button Content="Готово: просмотреть" Margin="5" Padding="4" Background="Green" Foreground="White"/>
+                        <Button Content="Надо сделать: Дать ответ на задание" Margin="5"  Padding="4" Background="#ced4da" />
+                        <Button Content="Надо сделать: Получить оценку" Margin="5" Padding="4" 
+                                Background="#ced4da" />
+                    </StackPanel>
+                </BlockUIContainer>
+                <Paragraph TextAlignment="Left">
+                    <Bold>Цель</Bold>
+                    <LineBreak/>
+                    Познакомиться с фиксированными и потоковыми документами в WPF.
+                </Paragraph>
+                <Paragraph>
+                    <Bold>Ход работы</Bold>
+                </Paragraph>
+                <List MarkerStyle="Decimal">
+                    <ListItem>
+                        <Paragraph>выполнить задание</Paragraph>
+                    </ListItem>
+
+                    <ListItem>
+                        <Paragraph>оформить отчет</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    <Bold>Содержание отчета</Bold>
+                </Paragraph>
+                <List MarkerStyle="Decimal">
+                    <ListItem>
+                        <Paragraph>ссылка на репозиторий с проектом</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    <Bold>Практическая часть</Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Underline>Задание 1.</Underline> Подготовить
+                    <Run TextDecorations="Strikethrough">фиксированный</Run> потоковый документ по произвольной теме. Проявите вкус и фантазию при оформлении. Обязательно наличие блочных элементов Paragraph, List, Table.
+                </Paragraph>
+                <Paragraph>
+                    <Bold>Состояние ответа</Bold>
+                </Paragraph>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="200px"/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow Background="LightGray">
+                            <TableCell>
+                                <Paragraph>
+                                    <Bold>Номер попытки</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Номер этой попытки - 1. (Разрешено попыток - 18)
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Left">
+                                    <Bold>Состояние ответа на задание</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Ни одной попытки
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                        <TableRow Background="LightGray">
+                            <TableCell>
+                                <Paragraph>
+                                    <Bold>Состояние оценивания</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Не оценено
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    <Bold>Последнее изменение</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    -
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <BlockUIContainer>
+                    <Button Content="Добавить ответ на задание" Foreground="Gray" Width="300" Padding="5" Click="open15wpf"/>
+                </BlockUIContainer>
+                <Paragraph TextAlignment="Center">
+                    Вы пока не предоставили ответ
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+
+    </Grid>
+</Window>
