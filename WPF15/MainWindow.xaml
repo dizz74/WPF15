@@ -5,18 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF15"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
-    <Grid>
-        <FlowDocumentReader x:Name="documentViewer">
+        Title="MainWindow" Height="750" Width="800">
+    <FlowDocumentReader x:Name="documentViewer">
             <FlowDocument ColumnWidth="550" ColumnGap="10">
                 <Paragraph>ЗАДАНИЕ 15. ДОКУМЕНТЫ И ПЕЧАТЬ</Paragraph>
-                <BlockUIContainer TextAlignment="Left">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
-                                >
+                <BlockUIContainer>
+                    <StackPanel Orientation="Horizontal">
                         <Button Content="Готово: просмотреть" Margin="5" Padding="4" Background="Green" Foreground="White"/>
                         <Button Content="Надо сделать: Дать ответ на задание" Margin="5"  Padding="4" Background="#ced4da" />
-                        <Button Content="Надо сделать: Получить оценку" Margin="5" Padding="4" 
-                                Background="#ced4da" />
+                        <Button Content="Надо сделать: Получить оценку" Margin="5" Padding="4" Background="#ced4da" />
                     </StackPanel>
                 </BlockUIContainer>
                 <Paragraph TextAlignment="Left">
@@ -31,7 +28,6 @@
                     <ListItem>
                         <Paragraph>выполнить задание</Paragraph>
                     </ListItem>
-
                     <ListItem>
                         <Paragraph>оформить отчет</Paragraph>
                     </ListItem>
@@ -49,7 +45,8 @@
                 </Paragraph>
                 <Paragraph>
                     <Underline>Задание 1.</Underline> Подготовить
-                    <Run TextDecorations="Strikethrough">фиксированный</Run> потоковый документ по произвольной теме. Проявите вкус и фантазию при оформлении. Обязательно наличие блочных элементов Paragraph, List, Table.
+                    <Run TextDecorations="Strikethrough">фиксированный</Run> потоковый документ по произвольной теме. 
+                    Проявите вкус и фантазию при оформлении. Обязательно наличие блочных элементов Paragraph, List, Table.
                 </Paragraph>
                 <Paragraph>
                     <Bold>Состояние ответа</Bold>
@@ -85,7 +82,6 @@
                                 </Paragraph>
                             </TableCell>
                         </TableRow>
-
                         <TableRow Background="LightGray">
                             <TableCell>
                                 <Paragraph>
@@ -120,6 +116,5 @@
                 </Paragraph>
             </FlowDocument>
         </FlowDocumentReader>
-
-    </Grid>
+   
 </Window>
